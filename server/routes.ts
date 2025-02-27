@@ -40,5 +40,9 @@ router.post("/quiz", (req: Request, res: Response): void => {
   }
 });
 
+// Homepagina
+router.get("/breinbreker.ejs", (req: Request, res: Response): void => {
+  res.render("breinbreker", { title: "Escape Room" });
+});
 
 export default router;
