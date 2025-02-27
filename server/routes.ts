@@ -33,16 +33,24 @@ router.post("/quiz", (req: Request, res: Response): void => {
     ? "Correct! 🎉"
     : "Fout! 😢 Probeer opnieuw.";
 
-  res.render("result", { title: "Quiz resultaat", boodschap: message });
-  const userName: string = req.body.userName?.trim() || "";
-  if(isCorrect){
-    fetchApi(userName)
+    if(isCorrect) {
+      fetch(
+          "https://api.deweirdt.be/games/index.php", {
+              method: "POST",
+              headers: {
+                  "Content-Type": "application/x-www-form-urlencoded"
+              },
+              body: new URLSearchParams({userName: req.body.username, game_key: "DigitaleEscapeR00m!"})
+          })
+          .then(response => response.json())
+          .then(data => console.log(data))
+          .then(error => console.error(error));
   }
+  res.render("result", { title: "Challenge resultaat", boodschap: message });
 });
 
 // Homepagina
-router.get("/breinbreker.ejs", (req: Request, res: Response): void => {
+router.get("/breinbreker", (req: Request, res: Response): void => {
   res.render("breinbreker", { title: "Escape Room" });
 });
-
 export default router;
