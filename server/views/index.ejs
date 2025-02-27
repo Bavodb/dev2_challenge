@@ -1,0 +1,43 @@
+<header>
+    <h1>Escape room</h1>
+    <h2>Ontsnap uit de <span class="color-red">digitale kluis</span></h2>
+  </header>
+
+  <main>
+    <!-- misschien kan je eens in je console kijken. -->
+    <em class="introductie">Los de drie puzzels op om de geheime <span class="color-red">code</span> te vinden!</em>
+    <section class="puzzel1">
+      <h2>Puzzel 1: Wie is deze bekende persoon?</h2>
+      <p>
+        Gebruik de eerste letters van de woorden in deze raadselachtige zin en
+        herschik ze. Misschien moet je ook denken aan een beroemde
+        wetenschapper...
+      </p>
+    </section>
+
+    <section class="puzzel2">
+      <h2>Puzzel 2: Breinbreker</h2>
+      <p>
+        Dit is een wiskundige brein breker. Laat je brein maar kraken voor op
+        een juiste uitkomst te komen.
+      </p>
+      <a href="breinbreker.ejs">klik voor Breinbreker</a>
+    </section>
+
+    <section class="puzzel3">
+      <!-- zoek naar de hint in de inspector: Waar worden je gegevens opgeslagen maar ook verwijderd als je een nieuwe sessie start? -->
+      <h2>Puzzel 3: Zoek het dier</h2>
+      <p>
+        Zoek welk dier het is. Het is misschien nodig om de letters in een
+        andere volgorde te zetten.
+      </p>
+    </section>
+
+    <form id="codeForm">
+      <input type="text" class="codeInput" id="nameInput" placeholder="Type hier je naam" name="userName">
+      <input type="text" class="codeInput" id="codeInput" placeholder="Type hier de code in" name="antwoord">
+      <button id="codeButton">verstuur</button>
+    </form>
+  </main>
+
+  <script src="js/main.js"></script>

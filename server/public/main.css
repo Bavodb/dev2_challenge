@@ -1,0 +1,129 @@
+body {
+    background-color: hsl(216, 18%, 16%);
+    color: whitesmoke;
+    font-family: "Inconsolata", sans-serif;
+  }
+  
+  header {
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .color-red {
+    color: hsl(6, 100%, 40%);
+  }
+  
+  .introductie{
+    font-size: 1.5rem;
+    text-decoration: dotted;
+  }
+  main {
+    background-color:black; 
+    color: hsl(120, 100%, 40%);
+    text-align: center;
+    margin: 2rem;
+    max-width: 100%;
+    width: 40rem;
+    margin: 0 auto;
+    padding: 3rem;
+    border-radius: 10rem;
+  }
+  
+  a {
+    color: #ff6347;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 0.4rem 0.8rem;
+    background-color: #333;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+  
+  a:hover {
+    color: white;
+    background-color: #32cd32;
+    transform: scale(1.05);
+  }
+  
+  #codeForm {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .codeInput {
+    font-family: "Courier New", sans-serif;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border: 2px solid #32cd32;
+    border-radius: 0.5rem;
+    background-color: #222;
+    color: #32cd32;
+    width: 20rem;
+    margin-bottom: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  #codeInput:focus {
+    border-color: #ff6347;
+    outline: none;
+  }
+  
+  #codeButton {
+    font-family: "Courier New", monospace;
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #333;
+    color: #32cd32;
+    border: 2px solid #32cd32;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    width: 20rem;
+  }
+  
+  #codeButton:hover {
+    background-color: #32cd32;
+    color: #333;
+    transform: scale(1.05);
+  }
+  
+  #codeButton:active {
+    transform: scale(0.95);
+  }
+  .donkeyKong-div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      flex-direction: column;
+    }
+    
+    .donkeyKong {
+      max-width: 100%;
+      height: auto;
+      border-radius: 3rem;
+    }
+    
+    #hintButton {
+      margin-top: 1.25rem; 
+      padding: 0.5rem 1.25rem;
+      font-size: 1.2rem;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    #hintButton:hover {
+      background-color: #45a049;
+    }
+    
