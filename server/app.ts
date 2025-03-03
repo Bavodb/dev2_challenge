@@ -1,28 +1,16 @@
-// import express, { Application, Request, Response } from "express";
-// import path from "path";
-// import routes from "./routes";
-// const app: Application = express();
-// app.use(express.static(path.join(__dirname, "/public")));
-// const PORT: number = 3000;
-
-// app.use(express.urlencoded({ extended: true }));
-// app.use("/", routes);
-
-// app.listen(PORT, () => {
-//   console.log(`Server draait op http://localhost:${PORT}`);
-// });
-
 import express, { Application } from "express";
 import path from "path";
 import expressLayouts from "express-ejs-layouts";
 import routes from "./routes";
 
 const app: Application = express();
-const PORT : number = parseInt(<string>process.env.PORT, 10) || 3000;
+const PORT: number = parseInt(<string>process.env.PORT, 10) || 3000;
+
+// Vercel Server
+app.set("views", path.join(__dirname, "views"));  // Correcte manier om het pad in te stellen
 
 // EJS als template-engine instellen
 app.set("view engine", "ejs");
-app.set("views", "./server/views");
 
 // Middleware voor layouts
 app.use(expressLayouts);
