@@ -40,7 +40,7 @@ router.post("/quiz", (req: Request, res: Response): void => {
 });
 
 // Homepagina
-router.get("/breinbreker", (req: Request, res: Response): void => {
+router.get("/breinbreker", (_: Request, res: Response): void => {
   res.render("breinbreker", { title: "Escape Room" });
 });
 export default router;
