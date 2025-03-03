@@ -7,7 +7,7 @@ const app: Application = express();
 const PORT: number = parseInt(<string>process.env.PORT, 10) || 3000;
 
 // Vercel Server
-app.set("views", path.join(__dirname, "views"));  // Correcte manier om het pad in te stellen
+app.set("views", path.join(__dirname, "views"));
 
 // EJS als template-engine instellen
 app.set("view engine", "ejs");
